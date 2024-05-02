@@ -10,7 +10,7 @@ This tool brute forces files in URL for LFI.
 
 - **Python:** Python for sending requests and reading content.
 
-## Installation
+## Installation & Usage
 
 1. Clone the repository: git clone https://github.com/UDAYSAI8/ca4.git
 2. Navigate to the project directory
