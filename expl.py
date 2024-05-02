@@ -100,20 +100,14 @@ def test_path_traversal(url, cookies=None):
         num = 0
         num1 = 0
         for directory in directories:
-            # Construct the path traversal URL with the directory path
             target_url = f"{url}{directory}"
-
-            # Build the curl command with cookies and the constructed URL
             curl_command = f"curl -s -b \"{cookies}\" {target_url}"
-
-            # Execute the curl command and capture the output
             result = subprocess.run(curl_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
             output_parts = result.stdout.split("<!DOCTYPE html>")
             if len(output_parts) > 1:
                 content = output_parts[0]
             else:
                 content = result.stdout
-            # Check if the output contains any error messages
             if "Failed to open stream" in content or "include(): Failed opening" in content or len(output_parts) == 1:
                 print(f"Failed to include file: {target_url}")
                 num1 = num1+1
