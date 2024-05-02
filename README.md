@@ -19,6 +19,8 @@ This tool brute forces files in URL for LFI.
 5. Run the expl.py by running: python3 expl.py.
 6. Provide the url and dont provide param value.
 7. If the website is authenticated then we can provide cookies.
+   ![image](https://github.com/UDAYSAI8/ca4/assets/68594069/1839e778-f3d3-4bea-aeb0-6d914657b71f)
+
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
